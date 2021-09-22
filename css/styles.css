@@ -24,22 +24,25 @@ body {
 .col-header {
   width: 150px;
   box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 0.8rem 1rem;
+  text-align: center;
   color: #fff;
 }
 
 .item {
   width: 150px;
-  height: 66px;
   border: 1px solid #eee;
   box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
-  border-radius: 20px;
+  border-radius: 5px;
   background: #f7f6f7;
   padding: 0.8rem 1rem;
   color: #828282;
   text-align: center;
   cursor: grab;
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .item:active {
@@ -47,18 +50,73 @@ body {
 }
 
 .placeholder {
+  border: none;
   width: 150px;
-  height: 66px;
+  height: 100vh;
+  transition: all .3s ease-in;
 }
 
-.start {
-  background: linear-gradient(90deg, #ff85e4 0%, #229efd 179.25%);
+.placeholder .item:hover {
+  background: linear-gradient(90deg, #0079f0 0%, #f0131e 100%);
+  color: #fff;
+  transition: all .3s ease-in;
 }
 
-.progress {
-  background: linear-gradient(90deg, #209cff 0%, #68e0cf 100%);
+.placeholder.dc .item:hover {
+  background: #0079f0;
+  color: #fff;
+  transition: all .3s ease-in;
 }
 
-.done {
-  background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+.placeholder.marvel .item:hover {
+  background: #f0131e;
+  color: #fff;
+  transition: all .3s ease-in;
+}
+
+.col-header.dc {
+  font-size: 30px;
+  font-weight: 900;
+  background: #0079f0;
+  color: #fff;
+}
+
+.col-header.progress {
+  font-size: 30px;
+  background: linear-gradient(90deg, #0079f0 0%, #f0131e 100%);
+}
+
+.col-header.marvel {
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+  background: #f0131e;
+}
+
+.hold {
+  background: darkorange;
+  transition: all 0.1s ease-in;
+  color: #fff;
+}
+
+.hold:active {
+  opacity: 0;
+  transition: opacity .3s ease-out;
+}
+
+.hide {
+  display: none;
+}
+
+.hovered {
+  border-top: 2px solid #828282;
+  transition: border-top-color .6s ease-in;
+}
+
+.marvel.hovered {
+  border-color: #f0131e;
+}
+
+.dc.hovered {
+  border-color: #0079f0;
 }

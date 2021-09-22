@@ -9,19 +9,29 @@
   <body>
     <div>
       <div class="row">
-          <div class="col-header start">Начать</div>
-          <div class="col-header progress">В процессе</div>
-          <div class="col-header done">Готовы</div>
+          <div class="col-header dc">DC</div>
+          <div class="col-header progress">?</div>
+          <div class="col-header marvel">MARVEL</div>
       </div>
 
       <div class="row">
-        <div class="placeholder">
-          <div class="item">Перетащи меня</div>
+        <div class="placeholder dc">
+
         </div>
-        <div class="placeholder"></div>
-        <div class="placeholder"></div>
+        <div class="placeholder">
+          <div class="item" draggable="true" data-type="DC">Batman</div>
+          <div class="item" draggable="true" data-type="MARVEL">Capitan America</div>
+          <div class="item" draggable="true" data-type="MARVEL">IronMan</div>
+          <div class="item" draggable="true" data-type="DC">Superman</div>
+          <div class="item" draggable="true" data-type="DC">Aquaman</div>
+          <div class="item" draggable="true" data-type="MARVEL">Thor</div>
+          <div class="item" draggable="true" data-type="DC">Flash</div>
+          <div class="item" draggable="true" data-type="MARVEL">Hulk</div>
+        </div>
+        <div class="placeholder marvel"></div>
       </div>
 
     </div>
+    <script src="./js/app.js"></script>
   </body>
 </html>

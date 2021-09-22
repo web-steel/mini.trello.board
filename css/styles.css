@@ -16,33 +16,36 @@ body {
 
 .row {
   display: flex;
-  width: 600px;
+  width: 100vw;
   justify-content: space-between;
-  margin-bottom: 1rem;
 }
 
 .col-header {
-  width: 150px;
+  width: 100vw;
+  border-radius: 3px;
+  padding: 10px 8px;
+  color: #172b4d;
+  background: #ebecf0;
+  margin: 0 4px;
+  white-space: nowrap;
   box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
-  border-radius: 5px;
-  padding: 0.8rem 1rem;
-  text-align: center;
-  color: #fff;
 }
 
 .item {
-  width: 150px;
-  border: 1px solid #eee;
-  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
-  border-radius: 5px;
-  background: #f7f6f7;
-  padding: 0.8rem 1rem;
-  color: #828282;
-  text-align: center;
-  cursor: grab;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #091e4240;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 8px;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  text-decoration: none;
+  color: #172b4d;
+  overflow: hidden;
+  padding: 6px 8px 2px;
   margin-top: 5px;
-  text-transform: uppercase;
-  font-weight: bold;
 }
 
 .item:active {
@@ -51,57 +54,13 @@ body {
 
 .placeholder {
   border: none;
-  width: 150px;
+  width: 100vw;
   height: 100vh;
-  transition: all .3s ease-in;
-}
-
-.placeholder .item:hover {
-  background: linear-gradient(90deg, #0079f0 0%, #f0131e 100%);
-  color: #fff;
-  transition: all .3s ease-in;
-}
-
-.placeholder.dc .item:hover {
-  background: #0079f0;
-  color: #fff;
-  transition: all .3s ease-in;
-}
-
-.placeholder.marvel .item:hover {
-  background: #f0131e;
-  color: #fff;
-  transition: all .3s ease-in;
-}
-
-.col-header.dc {
-  font-size: 30px;
-  font-weight: 900;
-  background: #0079f0;
-  color: #fff;
-}
-
-.col-header.progress {
-  font-size: 30px;
-  background: linear-gradient(90deg, #0079f0 0%, #f0131e 100%);
-}
-
-.col-header.marvel {
-  font-size: 30px;
-  font-weight: 900;
-  color: #fff;
-  background: #f0131e;
+  margin: 0 4px;
 }
 
 .hold {
-  background: darkorange;
-  transition: all 0.1s ease-in;
-  color: #fff;
-}
 
-.hold:active {
-  opacity: 0;
-  transition: opacity .3s ease-out;
 }
 
 .hide {
@@ -110,13 +69,4 @@ body {
 
 .hovered {
   border-top: 2px solid #828282;
-  transition: border-top-color .6s ease-in;
-}
-
-.marvel.hovered {
-  border-color: #f0131e;
-}
-
-.dc.hovered {
-  border-color: #0079f0;
 }

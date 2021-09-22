@@ -17,8 +17,7 @@ for(const placeholder of placeholders) {
 
 function dragstart(event) {
   itemSelected = event.target
-  event.target.classList.add('hold')
-  setTimeout(() => event.target.classList.add('hide'), 300)
+  setTimeout(() => event.target.classList.add('hide'), 0)
 }
 
 function dragend() {
@@ -55,19 +54,9 @@ function dragdrop(event) {
   }
 
   event.target.classList.remove('hovered')
-
-  const type = itemSelected.dataset.type.toLowerCase()
-  if(!event.target.classList.contains(type)) {
-    return
-  }
-
   event.target.append(itemSelected)
 }
 
 function isTargetPlaceholder(target) {
   return target.classList.contains('placeholder')
-}
-
-function isTargetPlaceholderProgress(target) {
-  return target.classList.contains('progress')
 }
